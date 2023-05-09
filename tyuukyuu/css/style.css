@@ -65,3 +65,110 @@ li {
   content: "";
   width: 28%;
 }
+
+#header {
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  padding: 40px 50px 30px 45px;
+  position: fixed;
+  top: 0;
+  /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
+  overflow-y: auto;
+}
+
+#header .nav-menu {
+  margin-bottom: 60px;
+}
+
+#header li {
+  font-size: 0.875rem;
+  padding: 8px 0;
+}
+
+
+/*
+動画を全画面表示
+*/
+#video {
+  width: 100%;
+  height: 100vh;
+}
+
+/*
+「position: fixed;」で動画を固定し、「top: -220px;」で表示位置を調整
+z-indexでマイナスを設定して、他のコンテンツの下に隠れるようにする
+*/
+#video .bg-video {
+  position: fixed;
+  top: -220px;
+  width: 100%;
+  z-index: -10;
+}
+
+/*-------------------------------------------
+Project
+-------------------------------------------*/
+/* 背景に黒の透過グラデーションを設定 */
+#project {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  color: #fff;
+}
+
+#project .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#project .list li {
+  width: 47%;
+  border: solid 1px #fff;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* 下段の2つはマージンを設定しない */
+#project .list li:last-child,
+#project .list li:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+#project .list li a {
+  display: block;
+}
+
+/* 疑似要素を使用して、テキストの下に「box-shadow」で影を付ける */
+#project .list li a::after {
+  content: "";
+  box-shadow: 0 -30px 15px -1px #2e2e2e inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#project .list .name {
+  color: #fff;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 4px;
+  left: 7px;
+  z-index: 5;
+}
+
+
+#feature{
+    background:rgba(0, 0, 0, 0);
+    color: #fff;
+    justify-content:space-between;
+}
+#feature .list li{
+    width: 30%;
+    font-size:0.875rem;
+    text-align:center;
+}
+
+
+
